@@ -257,14 +257,9 @@
 
   <script>
     function downloadApp() {
-      // Start APK download
-      const apkUrl = "app-armeabi-v7a-release.apk"; // replace with actual APK file
-      const link = document.createElement("a");
-      link.href = apkUrl;
-      link.download = "Curevia.apk";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+      // Open the Google Drive link in a new tab
+      const apkUrl = "https://drive.google.com/file/d/1v1jgXW26BmjhsDsSmHnzXuOX2MfP5_od/view?usp=drivesdk"; // user-provided Drive link
+      window.open(apkUrl, '_blank');
 
       // Show Thank You modal
       const modal = document.getElementById("thankyouModal");
